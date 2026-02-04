@@ -1,0 +1,291 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Klub STUDIO",
+        "address": "Witolda Budryka 4, 30-072 Kraków",
+        "url": "Klub Studio",
+        "category": "Gastronomia",
+        "conditions_raw": "Tylko dla studentów agh",
+        "tags": [
+          "klub",
+          "piwo",
+          "agh"
+        ],
+        "discounts": [
+          {
+            "label": "15",
+            "value": 15.0,
+            "type": "percent",
+            "conditions": "Tylko dla studentów agh"
+          }
+        ],
+        "discount_value_raw": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.908453660320365,
+          50.06831404907481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Sushi 77",
+        "address": "Kawiory 41, 30-055 Kraków",
+        "url": "https://maps.app.goo.gl/57LPSEpTbsUW8ZXE7",
+        "category": "Gastronomia",
+        "conditions_raw": "brak",
+        "tags": [
+          "sushi",
+          "azjatyckie"
+        ],
+        "discounts": [
+          {
+            "label": "50",
+            "value": 50.0,
+            "type": "percent",
+            "conditions": null
+          }
+        ],
+        "discount_value_raw": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9099544865056,
+          50.06880189510078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Tomasza 20 Resto Bar",
+        "address": "Św. Tomasza 20, 31-020 Kraków",
+        "url": "https://maps.app.goo.gl/B74aJnJL3mUYHRqv8",
+        "category": "Gastronomia",
+        "conditions_raw": "pn-pt do godz. 19 / sb-nd do godz 19",
+        "tags": [
+          "drinki",
+          "alkohol",
+          "stare miasto"
+        ],
+        "discounts": [
+          {
+            "label": "50",
+            "value": 50.0,
+            "type": "percent",
+            "conditions": "pn-pt do godz. 19"
+          },
+          {
+            "label": "25",
+            "value": 25.0,
+            "type": "percent",
+            "conditions": "sb-nd do godz 19"
+          }
+        ],
+        "discount_value_raw": "50/25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9409167041052,
+          50.06270627922463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Fidrygałki",
+        "address": "Urzędnicza 47, 30-048 Kraków",
+        "url": "https://maps.app.goo.gl/W6qwELBDxGaCLedx5",
+        "category": "Gastronomia",
+        "conditions_raw": "brak",
+        "tags": [
+          "kawa",
+          "śniadanie"
+        ],
+        "discounts": [
+          {
+            "label": "10",
+            "value": 10.0,
+            "type": "percent",
+            "conditions": null
+          }
+        ],
+        "discount_value_raw": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.919609902052304,
+          50.07167113394923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Meat Fellas Smash Burgers & Ribs",
+        "address": "Bosacka 7, 31-508 Kraków",
+        "url": "https://maps.app.goo.gl/Q4yBCYruGDQiJXpR9",
+        "category": "Gastronomia",
+        "conditions_raw": "brak",
+        "tags": [
+          "mięso",
+          "burgery"
+        ],
+        "discounts": [
+          {
+            "label": "15",
+            "value": 15.0,
+            "type": "percent",
+            "conditions": null
+          }
+        ],
+        "discount_value_raw": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.950011184569323,
+          50.067743315231766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "Przesada",
+        "address": "Marszałka Józefa Piłsudskiego 5, 31-110 Kraków",
+        "url": "https://maps.app.goo.gl/tas7vtSLo1tVjztH7",
+        "category": "Gastronomia",
+        "conditions_raw": "brak",
+        "tags": [
+          "kawa",
+          "śniadanie"
+        ],
+        "discounts": [
+          {
+            "label": "10",
+            "value": 10.0,
+            "type": "percent",
+            "conditions": null
+          }
+        ],
+        "discount_value_raw": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.93143154910697,
+          50.06067299162089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "Atras Squash Club",
+        "address": "Zawiła 61, 30-390 Kraków",
+        "url": "https://maps.app.goo.gl/Awatzv1A1mtzjRoP6",
+        "category": "Sport",
+        "conditions_raw": "brak",
+        "tags": [
+          "sport",
+          "squash"
+        ],
+        "discounts": [
+          {
+            "label": "25",
+            "value": 25.0,
+            "type": "percent",
+            "conditions": null
+          }
+        ],
+        "discount_value_raw": "25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.898709506041698,
+          50.007864256737655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "Sweetheart",
+        "address": "Krupnicza 14, 31-123 Kraków",
+        "url": "https://maps.app.goo.gl/tWhPDL4fs8vMyYUg7",
+        "category": "Gastronomia",
+        "conditions_raw": "brak",
+        "tags": [
+          "słodkie wypieki",
+          "kawa"
+        ],
+        "discounts": [
+          {
+            "label": "10",
+            "value": 10.0,
+            "type": "percent",
+            "conditions": null
+          }
+        ],
+        "discount_value_raw": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.930030612992315,
+          50.06354616683374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Bowling House",
+        "address": "Stanisława Klimeckiego 14B, 30-706 Kraków",
+        "url": "https://maps.app.goo.gl/ZzHbhqbpd5WpfmSA7",
+        "category": "Rozrywka",
+        "conditions_raw": "Środa",
+        "tags": [
+          "kręgle"
+        ],
+        "discounts": [
+          {
+            "label": "50",
+            "value": 50.0,
+            "type": "percent",
+            "conditions": "Środa"
+          }
+        ],
+        "discount_value_raw": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9703438302942,
+          50.04913171975373
+        ]
+      }
+    }
+  ]
+}
