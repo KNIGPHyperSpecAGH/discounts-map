@@ -1,11 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
+import { parseGeoJson } from "../../utils/json_parser";
 
 const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
+const GEOJSON_PATH = "/discounts.json";
 
 export default function MapView() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
+  const [discountsArray, setDiscount] = useState([]);
+
+  useEffect(() => {
+    fetch(GEOJSON_PATH)
+      .then((response) => response.json())
+      .then((geoJson) => {
+        const discounts = parseGeoJson(geoJson);
+        setDiscount(discounts);
+      });
+  }, []);
 
   useEffect(() => {
     if (!mapContainerRef.current || mapRef.current) return;
