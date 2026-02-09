@@ -28,10 +28,9 @@ export default function MapView() {
       center: [19.94, 50.06],
       zoom: 12,
     });
-    
     const marker = new maplibregl.Marker()
-        .setLngLat([19.94, 50.06])
-        .addTo(mapRef.current);
+      .setLngLat([19.94, 50.06])
+      .addTo(mapRef.current);
 
     return () => {
       mapRef.current?.remove();
