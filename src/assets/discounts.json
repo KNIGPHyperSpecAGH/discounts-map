@@ -10,11 +10,7 @@
         "url": "Klub Studio",
         "category": "Gastronomia",
         "conditions_raw": "Tylko dla studentów agh",
-        "tags": [
-          "klub",
-          "piwo",
-          "agh"
-        ],
+        "tags": ["klub", "piwo", "agh"],
         "discounts": [
           {
             "label": "15",
@@ -27,10 +23,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.908453660320365,
-          50.06831404907481
-        ]
+        "coordinates": [19.908453660320365, 50.06831404907481]
       }
     },
     {
@@ -42,10 +35,7 @@
         "url": "https://maps.app.goo.gl/57LPSEpTbsUW8ZXE7",
         "category": "Gastronomia",
         "conditions_raw": "brak",
-        "tags": [
-          "sushi",
-          "azjatyckie"
-        ],
+        "tags": ["sushi", "azjatyckie"],
         "discounts": [
           {
             "label": "50",
@@ -58,10 +48,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.9099544865056,
-          50.06880189510078
-        ]
+        "coordinates": [19.9099544865056, 50.06880189510078]
       }
     },
     {
@@ -73,11 +60,7 @@
         "url": "https://maps.app.goo.gl/B74aJnJL3mUYHRqv8",
         "category": "Gastronomia",
         "conditions_raw": "pn-pt do godz. 19 / sb-nd do godz 19",
-        "tags": [
-          "drinki",
-          "alkohol",
-          "stare miasto"
-        ],
+        "tags": ["drinki", "alkohol", "stare miasto"],
         "discounts": [
           {
             "label": "50",
@@ -96,10 +79,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.9409167041052,
-          50.06270627922463
-        ]
+        "coordinates": [19.9409167041052, 50.06270627922463]
       }
     },
     {
@@ -111,10 +91,7 @@
         "url": "https://maps.app.goo.gl/W6qwELBDxGaCLedx5",
         "category": "Gastronomia",
         "conditions_raw": "brak",
-        "tags": [
-          "kawa",
-          "śniadanie"
-        ],
+        "tags": ["kawa", "śniadanie"],
         "discounts": [
           {
             "label": "10",
@@ -127,10 +104,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.919609902052304,
-          50.07167113394923
-        ]
+        "coordinates": [19.919609902052304, 50.07167113394923]
       }
     },
     {
@@ -142,10 +116,7 @@
         "url": "https://maps.app.goo.gl/Q4yBCYruGDQiJXpR9",
         "category": "Gastronomia",
         "conditions_raw": "brak",
-        "tags": [
-          "mięso",
-          "burgery"
-        ],
+        "tags": ["mięso", "burgery"],
         "discounts": [
           {
             "label": "15",
@@ -158,10 +129,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.950011184569323,
-          50.067743315231766
-        ]
+        "coordinates": [19.950011184569323, 50.067743315231766]
       }
     },
     {
@@ -173,10 +141,7 @@
         "url": "https://maps.app.goo.gl/tas7vtSLo1tVjztH7",
         "category": "Gastronomia",
         "conditions_raw": "brak",
-        "tags": [
-          "kawa",
-          "śniadanie"
-        ],
+        "tags": ["kawa", "śniadanie"],
         "discounts": [
           {
             "label": "10",
@@ -189,10 +154,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.93143154910697,
-          50.06067299162089
-        ]
+        "coordinates": [19.93143154910697, 50.06067299162089]
       }
     },
     {
@@ -204,10 +166,7 @@
         "url": "https://maps.app.goo.gl/Awatzv1A1mtzjRoP6",
         "category": "Sport",
         "conditions_raw": "brak",
-        "tags": [
-          "sport",
-          "squash"
-        ],
+        "tags": ["sport", "squash"],
         "discounts": [
           {
             "label": "25",
@@ -220,10 +179,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.898709506041698,
-          50.007864256737655
-        ]
+        "coordinates": [19.898709506041698, 50.007864256737655]
       }
     },
     {
@@ -235,10 +191,7 @@
         "url": "https://maps.app.goo.gl/tWhPDL4fs8vMyYUg7",
         "category": "Gastronomia",
         "conditions_raw": "brak",
-        "tags": [
-          "słodkie wypieki",
-          "kawa"
-        ],
+        "tags": ["słodkie wypieki", "kawa"],
         "discounts": [
           {
             "label": "10",
@@ -251,10 +204,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.930030612992315,
-          50.06354616683374
-        ]
+        "coordinates": [19.930030612992315, 50.06354616683374]
       }
     },
     {
@@ -266,9 +216,7 @@
         "url": "https://maps.app.goo.gl/ZzHbhqbpd5WpfmSA7",
         "category": "Rozrywka",
         "conditions_raw": "Środa",
-        "tags": [
-          "kręgle"
-        ],
+        "tags": ["kręgle"],
         "discounts": [
           {
             "label": "50",
@@ -281,10 +229,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          19.9703438302942,
-          50.04913171975373
-        ]
+        "coordinates": [19.9703438302942, 50.04913171975373]
       }
     }
   ]
