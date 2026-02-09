@@ -1,7 +1,9 @@
+// eslint-disable-next-line
 export const parseGeoJson = (raw_geojson: any) => {
   if (!raw_geojson) {
     return [];
   }
+  // eslint-disable-next-line
   const array = raw_geojson.features.map((feature: any) => ({
     id: feature.properties.id, //kolejno podczytujemy atrybuty
     name: feature.properties.name,
