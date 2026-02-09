@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
-import { parseGeoJson } from "../../utils/json_parser";
+import { parseGeoJson } from "@/utils/json_parser";
 
 const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
 const GEOJSON_PATH = "/discounts.json";
