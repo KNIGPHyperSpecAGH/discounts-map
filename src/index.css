@@ -1,13 +1,4 @@
 @import "tailwindcss";
-<<<<<<< Updated upstream
-html,
-body,
-#root {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-=======
 
 @theme {
   --color-navbar: #485846;
@@ -19,7 +10,6 @@ body,
   --font-header: 'Lato', sans-serif;
   --font-text: 'Lato', sans-serif;
   --font-main: 'Lato', sans-serif;
->>>>>>> Stashed changes
 }
 
 @layer base {
