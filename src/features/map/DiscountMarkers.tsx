@@ -35,7 +35,10 @@ export default function DiscountMarkers({
 
       const markerElement = marker.getElement();
       markerElement.title = discount.name;
-      markerElement.setAttribute("aria-label", `Pokaż szczegóły: ${discount.name}`);
+      markerElement.setAttribute(
+        "aria-label",
+        `Pokaż szczegóły: ${discount.name}`,
+      );
       markerElement.addEventListener("click", () => {
         onSelect(discount.id);
       });
