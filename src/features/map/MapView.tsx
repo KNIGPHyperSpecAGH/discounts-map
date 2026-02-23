@@ -18,7 +18,9 @@ type DiscountPoint = {
   id: number;
   name: string;
   address: string;
+  url?: string;
   category: string;
+  conditions_raw?: string;
   tags: string[];
   discounts: DiscountValue[];
   coordinates: [number, number];
@@ -28,10 +30,14 @@ export default function MapView() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [discountsArray, setDiscount] = useState<DiscountPoint[]>([]);
-  const [selectedDiscountId, setSelectedDiscountId] = useState<number | null>(null);
+  const [selectedDiscountId, setSelectedDiscountId] = useState<number | null>(
+    null,
+  );
 
   const selectedDiscount = useMemo(
-    () => discountsArray.find((discount) => discount.id === selectedDiscountId) ?? null,
+    () =>
+      discountsArray.find((discount) => discount.id === selectedDiscountId) ??
+      null,
     [discountsArray, selectedDiscountId],
   );
 
@@ -63,7 +69,9 @@ export default function MapView() {
     <div className="flex h-full w-full">
       <aside className="w-[320px] max-w-[85vw] border-r border-black/10 bg-white p-4">
         <h2 className="mb-4 text-lg font-bold">Szczegoly punktu</h2>
-        {!selectedDiscount && <p className="text-sm text-black/60">Wybierz marker na mapie.</p>}
+        {!selectedDiscount && (
+          <p className="text-sm text-black/60">Wybierz marker na mapie.</p>
+        )}
         {selectedDiscount && (
           <div className="space-y-3 text-sm">
             <div>
@@ -94,6 +102,16 @@ export default function MapView() {
                 ))}
               </ul>
             </div>
+            {selectedDiscount.url && (
+              <a
+                className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+                href={selectedDiscount.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Maps
+              </a>
+            )}
           </div>
         )}
       </aside>
