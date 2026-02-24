@@ -232,7 +232,7 @@
         "coordinates": [19.9703438302942, 50.04913171975373]
       }
     },
-      {
+    {
       "type": "Feature",
       "properties": {
         "id": 10,
@@ -241,7 +241,7 @@
         "url": "https://maps.app.goo.gl/pXQUfmaonUFxjgVj9",
         "category": "Gastronomia",
         "conditions_raw": "pon-czw caly dzien / w weekend do 19:00",
-        "tags": ["drinki","alkohol"],
+        "tags": ["drinki", "alkohol"],
         "discounts": [
           {
             "label": "Pon-Czw cały dzień",
@@ -272,7 +272,7 @@
         "url": "https://maps.app.goo.gl/8T6m48zRgr1uaWPG7",
         "category": "Gastronomia",
         "conditions_raw": "17:00-19:00",
-        "tags": ["drinki","alkohol"],
+        "tags": ["drinki", "alkohol"],
         "discounts": [
           {
             "label": "17:00-19:30",
@@ -285,10 +285,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [ 19.9356046497899, 50.0642315026038]
+        "coordinates": [19.9356046497899, 50.0642315026038]
       }
     },
-        {
+    {
       "type": "Feature",
       "properties": {
         "id": 12,
@@ -297,7 +297,7 @@
         "url": "https://maps.app.goo.gl/gD2ZK38uarosqFDN9",
         "category": "Gastronomia",
         "conditions_raw": "pon-czw caly dzien / w weekend do 19:00",
-        "tags": ["vege","kebab"],
+        "tags": ["vege", "kebab"],
         "discounts": [
           {
             "label": "10",
@@ -322,7 +322,7 @@
         "url": "https://maps.app.goo.gl/1b3U65tNkdnv4rmg6",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["bistro","lunch"],
+        "tags": ["bistro", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -337,7 +337,8 @@
         "type": "Point",
         "coordinates": [19.929712544089206, 50.06650465593715]
       }
-    },   {
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 14,
@@ -346,7 +347,7 @@
         "url": "https://maps.app.goo.gl/q8tPGkSpuuUU2vY2A",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "20",
@@ -361,7 +362,8 @@
         "type": "Point",
         "coordinates": [19.89665227572871, 50.09310212035358]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 15,
@@ -370,7 +372,7 @@
         "url": "https://maps.app.goo.gl/snJtSyWAJ3Ltacnm8",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "20",
@@ -385,7 +387,8 @@
         "type": "Point",
         "coordinates": [19.946251459992745, 50.06836317618421]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 15,
@@ -394,7 +397,7 @@
         "url": "https://maps.app.goo.gl/vXAExyp7ywsrB2G7A",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","stare miasto"],
+        "tags": ["pierogi", "stare miasto"],
         "discounts": [
           {
             "label": "10",
@@ -409,7 +412,8 @@
         "type": "Point",
         "coordinates": [19.933936239280555, 50.063255014420136]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 16,
@@ -418,7 +422,7 @@
         "url": "https://maps.app.goo.gl/zYtv73TNPgpXvWXX8",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -433,7 +437,8 @@
         "type": "Point",
         "coordinates": [19.932344892570825, 50.07263936387878]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 17,
@@ -442,7 +447,7 @@
         "url": "https://maps.app.goo.gl/nB9qzjytUtMdB8Js7",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -457,7 +462,8 @@
         "type": "Point",
         "coordinates": [19.92882735878394, 50.06818178452816]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 18,
@@ -466,7 +472,7 @@
         "url": "https://maps.app.goo.gl/nB9qzjytUtMdB8Js7",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -481,7 +487,8 @@
         "type": "Point",
         "coordinates": [19.94685180304016, 50.0610192090916]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 19,
@@ -490,7 +497,7 @@
         "url": "https://maps.app.goo.gl/8LRKiwbkk4i3GkUX6",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -505,7 +512,8 @@
         "type": "Point",
         "coordinates": [19.92728240641912, 50.05341468946327]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 20,
@@ -514,7 +522,7 @@
         "url": "https://maps.app.goo.gl/d6QWJhEdDsF4QwnH6",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -529,7 +537,8 @@
         "type": "Point",
         "coordinates": [19.937925411598986, 50.05760283488975]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 21,
@@ -538,7 +547,7 @@
         "url": "https://maps.app.goo.gl/bVrWKk214gCDbL5q9",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -553,7 +562,8 @@
         "type": "Point",
         "coordinates": [19.935178829626334, 50.08613861610027]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 22,
@@ -562,7 +572,7 @@
         "url": "https://maps.app.goo.gl/DtUnxUw3HPbery48A",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -577,7 +587,8 @@
         "type": "Point",
         "coordinates": [19.98503996030998, 50.088331365343066]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 23,
@@ -586,7 +597,7 @@
         "url": "https://maps.app.goo.gl/JuULJtJkvujiBWfWA",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -601,7 +612,8 @@
         "type": "Point",
         "coordinates": [19.954702087541744, 50.05348603112003]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 24,
@@ -610,7 +622,7 @@
         "url": "https://maps.app.goo.gl/i8XJM2hsc8bFfV93A",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["pierogi","lunch"],
+        "tags": ["pierogi", "lunch"],
         "discounts": [
           {
             "label": "10",
@@ -625,7 +637,8 @@
         "type": "Point",
         "coordinates": [20.052404909333763, 50.09644986612427]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 25,
@@ -634,7 +647,7 @@
         "url": "https://maps.app.goo.gl/S6J4iEYvotCd2K659",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "10",
@@ -649,7 +662,8 @@
         "type": "Point",
         "coordinates": [19.94469457556278, 50.04318442948522]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 26,
@@ -658,7 +672,7 @@
         "url": "https://maps.app.goo.gl/S6J4iEYvotCd2K659",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["cukiernia","słodkie wypieki"],
+        "tags": ["cukiernia", "słodkie wypieki"],
         "discounts": [
           {
             "label": "10",
@@ -673,7 +687,8 @@
         "type": "Point",
         "coordinates": [19.9286409629363, 50.0670752047937]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 27,
@@ -682,7 +697,7 @@
         "url": "https://maps.app.goo.gl/8iSsS2bLG1JrXUE1A",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["cukiernia","słodkie wypieki"],
+        "tags": ["cukiernia", "słodkie wypieki"],
         "discounts": [
           {
             "label": "10",
@@ -697,7 +712,8 @@
         "type": "Point",
         "coordinates": [19.93961552328266, 50.06293876639435]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 28,
@@ -706,7 +722,7 @@
         "url": "https://maps.app.goo.gl/7AUoyFg7cC17XY6r9",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "10",
@@ -721,7 +737,8 @@
         "type": "Point",
         "coordinates": [19.951915918756963, 50.06751595686495]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 29,
@@ -730,7 +747,7 @@
         "url": "https://maps.app.goo.gl/qaomhpdPhPpoHWGw6",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "13 zł za dużego kebaba",
@@ -745,7 +762,8 @@
         "type": "Point",
         "coordinates": [19.93109919715597, 50.06561013677197]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 30,
@@ -754,7 +772,7 @@
         "url": "https://maps.app.goo.gl/9LoNgSJpPqy9Eu266",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "13 zł za dużego kebaba",
@@ -769,7 +787,8 @@
         "type": "Point",
         "coordinates": [19.911572685276163, 50.07395642340435]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 31,
@@ -778,7 +797,7 @@
         "url": "https://maps.app.goo.gl/Ak4X2BGvPhXRGubg7",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "13 zł za dużego kebaba",
@@ -793,7 +812,8 @@
         "type": "Point",
         "coordinates": [19.914791336036203, 50.06756602314897]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 32,
@@ -802,7 +822,7 @@
         "url": "https://maps.app.goo.gl/y8K7K5KoF5njuakv9",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "13 zł za dużego kebaba",
@@ -817,7 +837,8 @@
         "type": "Point",
         "coordinates": [19.93517612418312, 50.063020608230524]
       }
-    },{
+    },
+    {
       "type": "Feature",
       "properties": {
         "id": 32,
@@ -826,7 +847,7 @@
         "url": "https://maps.app.goo.gl/Se4FrFcY8dC7JCnt7",
         "category": "Gastronomia",
         "conditions_raw": "student",
-        "tags": ["kebab","mięso"],
+        "tags": ["kebab", "mięso"],
         "discounts": [
           {
             "label": "13 zł za dużego kebaba",
