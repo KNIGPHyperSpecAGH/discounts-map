@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import { parseGeoJson } from "../../utils/json_parser";
 
@@ -11,17 +11,6 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [discountsArray, setDiscountsArray] = useState<any[]>([]);
   const extraMarkersRef = useRef<maplibregl.Marker[]>([]);
-
-  const handleMarkerClick = useCallback(() => {
-    onMarkerClick({
-      // TODO (Integracja z parserem):
-      // Zeby zintegrować to z reszta aplikacji
-      // A to tylko do testowania dane mozna usunac po tescie
-      id: 47,
-      nazwa: "Pizzeria Filutek :PPPP",
-      wartosc: "-20% na dużą pizzę",
-    });
-  }, [onMarkerClick]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,22 +33,19 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
       zoom: 12,
     });
 
-    const marker = new maplibregl.Marker()
-      .setLngLat([19.94, 50.06])
-      .addTo(mapRef.current);
-
-    const markerElement = marker.getElement();
-    markerElement.addEventListener("click", handleMarkerClick);
-
     return () => {
-      markerElement.removeEventListener("click", handleMarkerClick);
       mapRef.current?.remove();
       mapRef.current = null;
     };
-  }, [handleMarkerClick]);
+  }, []);
 
   useEffect(() => {
     if (!mapRef.current) return;
+
+    const markerListeners: Array<{
+      element: HTMLElement;
+      handler: () => void;
+    }> = [];
 
     extraMarkersRef.current.forEach((marker) => marker.remove());
     extraMarkersRef.current = discountsArray.map((discount) => {
@@ -67,16 +53,22 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
         .setLngLat(discount.coordinates)
         .addTo(mapRef.current!);
 
-      marker.getElement().addEventListener("click", handleMarkerClick);
+      const markerElement = marker.getElement();
+      const handleClick = () => onMarkerClick(discount);
+      markerElement.addEventListener("click", handleClick);
+      markerListeners.push({ element: markerElement, handler: handleClick });
 
       return marker;
     });
 
     return () => {
+      markerListeners.forEach(({ element, handler }) => {
+        element.removeEventListener("click", handler);
+      });
       extraMarkersRef.current.forEach((marker) => marker.remove());
       extraMarkersRef.current = [];
     };
-  }, [discountsArray, handleMarkerClick]);
+  }, [discountsArray, onMarkerClick]);
 
   return <div ref={mapContainerRef} className="w-full h-full bg-gray-200" />;
 }
