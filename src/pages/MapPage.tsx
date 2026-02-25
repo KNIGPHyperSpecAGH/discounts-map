@@ -10,20 +10,8 @@ export default function MapPage() {
       <SideBar
         isOpen={activeDiscount !== null}
         onClose={() => setActiveDiscount(null)}
-      >
-        {activeDiscount && (
-          <div>
-            {/* TODO: Integracja z reszta aplikacji: 
-              Parser JSON do dodania
-              Tutaj tylko jakieś testowe dane i testowy wyglad znizki
-            */}
-            <h2 className="text-2xl text-gray-800">{activeDiscount.nazwa}</h2>
-            <p className="mt-2 text-xl text-green-600">
-              {activeDiscount.wartosc}
-            </p>
-          </div>
-        )}
-      </SideBar>
+        activeDiscount={activeDiscount}
+      />
 
       <MapView onMarkerClick={(data) => setActiveDiscount(data)} />
     </div>
