@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import MapView from "../features/map/MapView";
-import SideBar from "../features/map/SideBar";
+import SideBar, { type ActiveDiscount } from "../features/map/SideBar";
 
 export default function MapPage() {
-  const [activeDiscount, setActiveDiscount] = useState<any>(null);
+  const [activeDiscount, setActiveDiscount] = useState<ActiveDiscount>(null);
+  const handleMarkerClick = useCallback((data: NonNullable<ActiveDiscount>) => {
+    setActiveDiscount(data);
+  }, []);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
@@ -13,7 +16,7 @@ export default function MapPage() {
         activeDiscount={activeDiscount}
       />
 
-      <MapView onMarkerClick={(data) => setActiveDiscount(data)} />
+      <MapView onMarkerClick={handleMarkerClick} />
     </div>
   );
 }
