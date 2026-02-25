@@ -1,13 +1,13 @@
 /**
  *  Tutaj wygląd i animacja SideBara dane są przekazywane przez prop children
  */
-type DiscountItem = {
+export type DiscountItem = {
   label: string;
   type: string;
   conditions: string | null;
 };
 
-type ActiveDiscount = {
+export type ActiveDiscount = {
   id: number;
   name: string;
   address: string;

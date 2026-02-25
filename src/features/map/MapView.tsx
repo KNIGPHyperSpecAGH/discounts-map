@@ -1,42 +1,45 @@
 import { useEffect, useRef, useState } from "react";
-import maplibregl from "maplibre-gl";
+import maplibregl, { type LngLatLike } from "maplibre-gl";
 import { parseGeoJson } from "../../utils/json_parser";
+import { type ActiveDiscount } from "./SideBar";
+import { useMapLibreMap } from "./hooks/useMapLibreMap";
+
+type DiscountDetails = NonNullable<ActiveDiscount>;
+type DiscountMapItem = DiscountDetails & {
+  coordinates: [number, number];
+};
 
 interface MapViewProps {
-  onMarkerClick: (data: any) => void;
+  onMarkerClick: (data: DiscountDetails) => void;
 }
 
+const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
+const MAP_CENTER: [number, number] = [19.94, 50.06];
+const MAP_ZOOM = 12;
+
 export default function MapView({ onMarkerClick }: MapViewProps) {
-  const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<maplibregl.Map | null>(null);
-  const [discountsArray, setDiscountsArray] = useState<any[]>([]);
+  const { mapContainerRef, mapRef } = useMapLibreMap({
+    style: MAP_STYLE,
+    center: MAP_CENTER,
+    zoom: MAP_ZOOM,
+  });
+  const [discountsArray, setDiscountsArray] = useState<DiscountMapItem[]>([]);
   const extraMarkersRef = useRef<maplibregl.Marker[]>([]);
+  const onMarkerClickRef = useRef(onMarkerClick);
+
+  useEffect(() => {
+    onMarkerClickRef.current = onMarkerClick;
+  }, [onMarkerClick]);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("/src/assets/discounts.json");
       const data = await response.json();
-      const parsedData = parseGeoJson(data);
+      const parsedData = parseGeoJson(data) as DiscountMapItem[];
       setDiscountsArray(parsedData);
     };
 
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    if (!mapContainerRef.current || mapRef.current) return;
-
-    mapRef.current = new maplibregl.Map({
-      container: mapContainerRef.current,
-      style: "https://tiles.openfreemap.org/styles/bright",
-      center: [19.94, 50.06],
-      zoom: 12,
-    });
-
-    return () => {
-      mapRef.current?.remove();
-      mapRef.current = null;
-    };
   }, []);
 
   useEffect(() => {
@@ -50,11 +53,11 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
     extraMarkersRef.current.forEach((marker) => marker.remove());
     extraMarkersRef.current = discountsArray.map((discount) => {
       const marker = new maplibregl.Marker()
-        .setLngLat(discount.coordinates)
+        .setLngLat(discount.coordinates as LngLatLike)
         .addTo(mapRef.current!);
 
       const markerElement = marker.getElement();
-      const handleClick = () => onMarkerClick(discount);
+      const handleClick = () => onMarkerClickRef.current(discount);
       markerElement.addEventListener("click", handleClick);
       markerListeners.push({ element: markerElement, handler: handleClick });
 
@@ -68,7 +71,7 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
       extraMarkersRef.current.forEach((marker) => marker.remove());
       extraMarkersRef.current = [];
     };
-  }, [discountsArray, onMarkerClick]);
+  }, [discountsArray, mapRef]);
 
   return <div ref={mapContainerRef} className="w-full h-full bg-gray-200" />;
 }
