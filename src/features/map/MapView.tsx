@@ -3,6 +3,7 @@ import maplibregl, { type LngLatLike } from "maplibre-gl";
 import { parseGeoJson } from "../../utils/json_parser";
 import { type ActiveDiscount } from "./SideBar";
 import { useMapLibreMap } from "./hooks/useMapLibreMap";
+import DiscountMarkers from "./DiscountMarkers";
 
 type DiscountDetails = NonNullable<ActiveDiscount>;
 type DiscountMapItem = DiscountDetails & {
@@ -42,36 +43,15 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    if (!mapRef.current) return;
-
-    const markerListeners: Array<{
-      element: HTMLElement;
-      handler: () => void;
-    }> = [];
-
-    extraMarkersRef.current.forEach((marker) => marker.remove());
-    extraMarkersRef.current = discountsArray.map((discount) => {
-      const marker = new maplibregl.Marker()
-        .setLngLat(discount.coordinates as LngLatLike)
-        .addTo(mapRef.current!);
-
-      const markerElement = marker.getElement();
-      const handleClick = () => onMarkerClickRef.current(discount);
-      markerElement.addEventListener("click", handleClick);
-      markerListeners.push({ element: markerElement, handler: handleClick });
-
-      return marker;
-    });
-
-    return () => {
-      markerListeners.forEach(({ element, handler }) => {
-        element.removeEventListener("click", handler);
-      });
-      extraMarkersRef.current.forEach((marker) => marker.remove());
-      extraMarkersRef.current = [];
-    };
-  }, [discountsArray, mapRef]);
-
-  return <div ref={mapContainerRef} className="w-full h-full bg-gray-200" />;
+  return (
+    <div ref={mapContainerRef} className="w-full h-full bg-gray-200">
+      {
+        <DiscountMarkers
+          map={mapRef.current}
+          discounts={discountsArray}
+          onMarkerClick={onMarkerClick}
+        />
+      }
+    </div>
+  );
 }
