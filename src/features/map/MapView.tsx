@@ -12,13 +12,14 @@ type DiscountMapItem = DiscountDetails & {
 
 interface MapViewProps {
   onMarkerClick: (data: DiscountDetails) => void;
+  onMapClick: () => void;
 }
 
 const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
 const MAP_CENTER: [number, number] = [19.94, 50.06];
 const MAP_ZOOM = 12;
 
-export default function MapView({ onMarkerClick }: MapViewProps) {
+export default function MapView({ onMarkerClick, onMapClick }: MapViewProps) {
   const { mapContainerRef, mapRef } = useMapLibreMap({
     style: MAP_STYLE,
     center: MAP_CENTER,
@@ -27,10 +28,36 @@ export default function MapView({ onMarkerClick }: MapViewProps) {
   const [discountsArray, setDiscountsArray] = useState<DiscountMapItem[]>([]);
   const extraMarkersRef = useRef<maplibregl.Marker[]>([]);
   const onMarkerClickRef = useRef(onMarkerClick);
+  
+  const onMapClickRef = useRef(onMapClick);
+  useEffect(() => {
+    onMapClickRef.current = onMapClick;
+  }, [onMapClick]);
 
   useEffect(() => {
     onMarkerClickRef.current = onMarkerClick;
   }, [onMarkerClick]);
+
+  // --- ZMIANA: Zmiana tablicy zależności z [mapRef] na [mapRef.current] ---
+  // Reagujemy na moment, w którym referencja wypełni się załadowaną mapą, 
+  // a nie na sam stały obiekt referencji.
+  useEffect(() => {
+    if (!mapRef.current) return;
+    const map = mapRef.current;
+
+    const handleMapClick = () => {
+      if (onMapClickRef.current) {
+        onMapClickRef.current();
+      }
+    };
+
+    map.on("click", handleMapClick);
+
+    return () => {
+      map.off("click", handleMapClick);
+    };
+  }, [mapRef.current]);
+  // --- KONIEC ZMIANY ---
 
   useEffect(() => {
     const fetchData = async () => {

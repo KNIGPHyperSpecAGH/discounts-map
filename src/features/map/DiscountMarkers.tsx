@@ -11,7 +11,6 @@ interface DiscountMarkersProps {
 }
 
 const ICON_MAP: Record<string, string> = {
-  //Zrobione troche losowo, można pomyśleć żeby jakoś lepiej te kategorie dopasować
   Gastronomia: 'url("/icons/znacznik_gastronomia.svg")',
   Inne: 'url("/icons/znacznik_inne.svg")',
   Rozrywka: 'url("/icons/znacznik_kultura_sztuka.svg")',
@@ -32,7 +31,9 @@ export default function DiscountMarkers({
     const markerInstances: maplibregl.Marker[] = [];
     const markerListeners: Array<{
       element: HTMLElement;
-      handler: () => void;
+      // --- ZMIANA: Aktualizacja typu handlera, by przyjmował obiekt zdarzenia myszy ---
+      handler: (e: MouseEvent) => void;
+      // --- KONIEC ZMIANY ---
     }> = [];
 
     discounts.forEach((discount) => {
@@ -50,7 +51,14 @@ export default function DiscountMarkers({
         .addTo(map);
 
       const markerElement = marker.getElement();
-      const handleClick = () => onMarkerClick(discount);
+      
+      // --- ZMIANA: Przechwycenie obiektu 'e' i zatrzymanie bąbelkowania przed uderzeniem w mapę ---
+      const handleClick = (e: MouseEvent) => {
+        e.stopPropagation();
+        onMarkerClick(discount);
+      };
+      // --- KONIEC ZMIANY ---
+      
       markerElement.addEventListener("click", handleClick);
       markerListeners.push({ element: markerElement, handler: handleClick });
 

@@ -16,7 +16,16 @@ export default function MapPage() {
         activeDiscount={activeDiscount}
       />
 
-      <MapView onMarkerClick={handleMarkerClick} />
+      {/* --- ZMIANA: Zamykanie panelu tylko na urządzeniach mobilnych (poniżej 768px) --- */}
+      <MapView 
+        onMarkerClick={handleMarkerClick} 
+        onMapClick={() => {
+          if (window.innerWidth < 768) {
+            setActiveDiscount(null);
+          }
+        }}
+      />
+      {/* --- KONIEC ZMIANY --- */}
     </div>
   );
 }
