@@ -4,6 +4,7 @@ import { parseGeoJson } from "../../utils/json_parser";
 import { type ActiveDiscount } from "./SideBar";
 import { useMapLibreMap } from "./hooks/useMapLibreMap";
 import DiscountMarkers from "./DiscountMarkers";
+import { type Category } from "./CategoryFilter";
 
 type DiscountDetails = NonNullable<ActiveDiscount>;
 type DiscountMapItem = DiscountDetails & {
@@ -11,6 +12,7 @@ type DiscountMapItem = DiscountDetails & {
 };
 
 interface MapViewProps {
+  activeCategory: Category | "Wszystkie";
   onMarkerClick: (data: DiscountDetails) => void;
   onMapClick: () => void;
 }
@@ -19,7 +21,11 @@ const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
 const MAP_CENTER: [number, number] = [19.94, 50.06];
 const MAP_ZOOM = 12;
 
-export default function MapView({ onMarkerClick, onMapClick }: MapViewProps) {
+export default function MapView({
+  activeCategory,
+  onMarkerClick,
+  onMapClick,
+}: MapViewProps) {
   const { mapContainerRef, mapRef } = useMapLibreMap({
     style: MAP_STYLE,
     center: MAP_CENTER,
@@ -28,7 +34,7 @@ export default function MapView({ onMarkerClick, onMapClick }: MapViewProps) {
   const [discountsArray, setDiscountsArray] = useState<DiscountMapItem[]>([]);
   const extraMarkersRef = useRef<maplibregl.Marker[]>([]);
   const onMarkerClickRef = useRef(onMarkerClick);
-  
+
   const onMapClickRef = useRef(onMapClick);
   useEffect(() => {
     onMapClickRef.current = onMapClick;
@@ -39,7 +45,7 @@ export default function MapView({ onMarkerClick, onMapClick }: MapViewProps) {
   }, [onMarkerClick]);
 
   // --- ZMIANA: Zmiana tablicy zależności z [mapRef] na [mapRef.current] ---
-  // Reagujemy na moment, w którym referencja wypełni się załadowaną mapą, 
+  // Reagujemy na moment, w którym referencja wypełni się załadowaną mapą,
   // a nie na sam stały obiekt referencji.
   useEffect(() => {
     if (!mapRef.current) return;
@@ -70,12 +76,18 @@ export default function MapView({ onMarkerClick, onMapClick }: MapViewProps) {
     fetchData();
   }, []);
 
+  // Filtrowanie wyliczonej tablicy przed przekazaniem do DiscountMarkers
+  const filteredDiscounts = discountsArray.filter(
+    (discount) =>
+      activeCategory === "Wszystkie" || discount.category === activeCategory,
+  );
+
   return (
     <div ref={mapContainerRef} className="w-full h-full bg-gray-200">
       {
         <DiscountMarkers
           map={mapRef.current}
-          discounts={discountsArray}
+          discounts={filteredDiscounts}
           onMarkerClick={onMarkerClick}
         />
       }
