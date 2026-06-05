@@ -29,11 +29,11 @@ const SideBar = ({ isOpen, onClose, activeDiscount }: SideBarProps) => {
       className={`
         absolute z-50 bg-white shadow-2xl transition-transform duration-300 ease-in-out
         w-full h-1/2 bottom-0 left-0 rounded-t-2xl border-t border-gray-200
-        md:w-80 md:h-full md:bottom-auto md:top-0 md:rounded-none md:border-t-0 md:border-r
+        md:w-80 md:h-full md:bottom-auto md:top-0 md:left-auto md:right-0 md:rounded-none md:border-t-0 md:border-l
         ${
           isOpen
             ? "translate-y-0 md:translate-x-0"
-            : "translate-y-full md:-translate-x-full"
+            : "translate-y-full md:translate-x-full"
         }
       `}
     >
