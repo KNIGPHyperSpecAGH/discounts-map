@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import maplibregl, { type LngLatLike } from "maplibre-gl";
+import * as maplibregl from 'maplibre-gl';
 import { parseGeoJson } from "../../utils/json_parser";
 import { type ActiveDiscount } from "./SideBar";
 import { useMapLibreMap } from "./hooks/useMapLibreMap";
